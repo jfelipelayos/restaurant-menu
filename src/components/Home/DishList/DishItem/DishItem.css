@@ -1,0 +1,8 @@
+@media (max-width: 600px) {
+  .dish-info {
+    flex-direction: column !important;
+  }
+  .dish-img {
+    margin-top: 20px;
+  }
+}

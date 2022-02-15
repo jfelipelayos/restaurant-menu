@@ -1,8 +1,7 @@
 import './App.css'
-/* eslint no-unused-vars: 0 */
 import React, { useEffect, useState } from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
-import Home from './Auth/Home/Home'
+import Home from './components/Home/Home'
 import SignIn from './Auth/SignIn/SignIn'
 import Header from './components/Header/Header'
 import axios from 'axios'
