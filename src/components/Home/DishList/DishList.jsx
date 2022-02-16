@@ -5,11 +5,11 @@ import Pagination from './Pagination/Pagination'
 /* eslint-disable react/prop-types */
 /* eslint no-unused-vars: 0 */
 
-function DishList ({ setHomeSection }) {
+function DishList ({ setHomeSection, menuDishes, setMenuDishes }) {
   const [posts, setPosts] = useState([])
   const [loading, setLoading] = useState(false)
   const [currentPage, setCurrentPage] = useState(1)
-  const [dishesPerPage, setDishesPerPage] = useState(10)
+  const [dishesPerPage] = useState(10)
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -39,7 +39,7 @@ function DishList ({ setHomeSection }) {
         <h2>Platos disponibles</h2>
         <button className='btn btn-primary' onClick={onClickReturn}>Regresar a tu menú</button>
       </div>
-      <DishItem posts={currentPosts} loading={loading}/>
+      <DishItem menuDishes={menuDishes} setMenuDishes={setMenuDishes} posts={currentPosts} loading={loading}/>
       <Pagination setHomeSection={setHomeSection} dishesPerPage={dishesPerPage} totalPosts={posts.length} paginate={paginate}/>
     </div>
   )

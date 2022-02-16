@@ -11,8 +11,8 @@ function Home () {
     <div className='container mt-5'>
       {
         homeSection === 'menu'
-          ? (<Menu menuDishes={menuDishes} setHomeSection={setHomeSection}/>)
-          : (<DishList setHomeSection={setHomeSection}/>)
+          ? (<Menu menuDishes={menuDishes} setMenuDishes={setMenuDishes} setHomeSection={setHomeSection}/>)
+          : (<DishList menuDishes={menuDishes} setMenuDishes={setMenuDishes} setHomeSection={setHomeSection}/>)
       }
     </div>
 
