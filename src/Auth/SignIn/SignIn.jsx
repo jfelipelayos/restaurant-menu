@@ -3,7 +3,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 
-function SignIn ({ logIn }) {
+function SignIn ({ logIn, setUser }) {
   const { register, handleSubmit, formState: { errors } } = useForm()
   const navigate = useNavigate()
   const onSubmit = (data) => {
@@ -42,6 +42,7 @@ function SignIn ({ logIn }) {
         />
       </div>
       <button className="btn btn-primary mt-3">Enviar</button>
+      <button className='btn btn-primary mt-3 mx-3' onClick={() => setUser(true)}>Entrar como invitado</button>
     </form>
     </div>
   )

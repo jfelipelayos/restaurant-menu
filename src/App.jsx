@@ -58,7 +58,7 @@ function App () {
         {!user && (
         <Route
           path='/auth'
-          element={<SignIn logIn={logIn}/>}
+          element={<SignIn setUser={setUser} logIn={logIn}/>}
           />
         )}
         {user && (
